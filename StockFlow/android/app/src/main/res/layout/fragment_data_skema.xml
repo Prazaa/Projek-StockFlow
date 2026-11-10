@@ -1,0 +1,1976 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Data &amp; skema — draft.html dataPage(). Statis, tanpa tabbar.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sf_bg"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText,ContentDescription,UseCompatTextViewDrawableXml">
+
+    <!-- Topbar sub-halaman -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_topbar_sub"
+        android:gravity="center_vertical"
+        android:minHeight="62dp"
+        android:orientation="horizontal"
+        android:paddingStart="18dp"
+        android:paddingTop="17dp"
+        android:paddingEnd="18dp"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            style="@style/SF.IconBtn.Boxed"
+            android:src="@drawable/ic_arrow_left" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/SF.Text.Title"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="Data &amp; skema"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="18dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="18dp"
+            android:paddingBottom="26dp">
+
+            <!-- Hero -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/bg_ic_info">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_database"
+                        app:tint="@color/sf_info" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/SF.Text.Title"
+                        android:text="Data &amp; skema" />
+
+                    <TextView
+                        style="@style/SF.Text.Caption"
+                        android:layout_marginTop="3dp"
+                        android:text="stockflow_database.sql · 399 baris · MySQL 8 / Laravel" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Ringkasan skema -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_card_12"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        style="@style/SF.Text.Title"
+                        android:text="9" />
+
+                    <TextView
+                        style="@style/SF.Text.Caption"
+                        android:layout_marginTop="4dp"
+                        android:text="tabel" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_card_12"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        style="@style/SF.Text.Title"
+                        android:text="2" />
+
+                    <TextView
+                        style="@style/SF.Text.Caption"
+                        android:layout_marginTop="4dp"
+                        android:text="view" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_card_12"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        style="@style/SF.Text.Title"
+                        android:text="37" />
+
+                    <TextView
+                        style="@style/SF.Text.Caption"
+                        android:layout_marginTop="4dp"
+                        android:text="baris data" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Alert info -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_alert_info"
+                android:orientation="horizontal"
+                android:paddingHorizontal="11dp"
+                android:paddingVertical="10dp">
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_marginTop="1dp"
+                    android:src="@drawable/ic_database"
+                    app:tint="@color/sf_info" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/SF.Text"
+                        android:fontFamily="@font/plus_jakarta_sans_extrabold"
+                        android:text="UI mengikuti data, bukan angka rekaan."
+                        android:textColor="@color/sf_info_ink"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        style="@style/SF.Text"
+                        android:layout_marginTop="1dp"
+                        android:lineSpacingMultiplier="1.25"
+                        android:text="5 barang, 7 batch, 9 mutasi, 4 notifikasi, dan 2 akun berasal langsung dari seeder. Tidak ada kolom harga atau scan pada skema."
+                        android:textColor="@color/sf_info_ink"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="2dp">
+
+                <TextView
+                    style="@style/SF.Text.Section"
+                    android:text="Tabel"
+                    android:textSize="13sp" />
+
+                <TextView
+                    style="@style/SF.Text.Caption"
+                    android:layout_marginTop="3dp"
+                    android:text="Klik untuk melihat kolom kunci" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <!-- users -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/bg_card_12"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="11dp"
+                        android:paddingVertical="10dp">
+
+                        <FrameLayout
+                            android:layout_width="29dp"
+                            android:layout_height="29dp"
+                            android:background="@drawable/bg_schema_ic">
+
+                            <ImageView
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_users"
+                                app:tint="#587368" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="9dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/SF.Text.Mono"
+                                android:fontFamily="monospace"
+                                android:letterSpacing="-0.03"
+                                android:text="users"
+                                android:textSize="11sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                style="@style/SF.Text.Caption"
+                                android:layout_marginTop="2dp"
+                                android:text="Akun pemilik &amp; staf" />
+                        </LinearLayout>
+
+                        <TextView
+                            style="@style/SF.Text"
+                            android:layout_marginStart="9dp"
+                            android:background="@drawable/bg_schema_count"
+                            android:fontFamily="@font/plus_jakarta_sans_extrabold"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="3dp"
+                            android:text="2"
+                            android:textColor="@color/sf_brand"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <View
+                        style="@style/SF.Divider" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="11dp"
+                        android:paddingBottom="11dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="0dp"
+                            android:text="id"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="nama"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="username"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="password"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="peran"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="0dp"
+                            android:text="aktif"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="remember_token"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="created_at"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="0dp"
+                            android:text="updated_at"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- barang -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/bg_card_12"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="11dp"
+                        android:paddingVertical="10dp">
+
+                        <FrameLayout
+                            android:layout_width="29dp"
+                            android:layout_height="29dp"
+                            android:background="@drawable/bg_schema_ic">
+
+                            <ImageView
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_box"
+                                app:tint="#587368" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="9dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/SF.Text.Mono"
+                                android:fontFamily="monospace"
+                                android:letterSpacing="-0.03"
+                                android:text="barang"
+                                android:textSize="11sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                style="@style/SF.Text.Caption"
+                                android:layout_marginTop="2dp"
+                                android:text="Master barang aktif" />
+                        </LinearLayout>
+
+                        <TextView
+                            style="@style/SF.Text"
+                            android:layout_marginStart="9dp"
+                            android:background="@drawable/bg_schema_count"
+                            android:fontFamily="@font/plus_jakarta_sans_extrabold"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="3dp"
+                            android:text="5"
+                            android:textColor="@color/sf_brand"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <View
+                        style="@style/SF.Divider" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="11dp"
+                        android:paddingBottom="11dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="0dp"
+                            android:text="id"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="kode_sku"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="nama"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="kategori"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="satuan"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="0dp"
+                            android:text="stok_minimum"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="created_by"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="deleted_by"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="0dp"
+                            android:text="deleted_at"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- batch_stok -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/bg_card_12"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="11dp"
+                        android:paddingVertical="10dp">
+
+                        <FrameLayout
+                            android:layout_width="29dp"
+                            android:layout_height="29dp"
+                            android:background="@drawable/bg_schema_ic">
+
+                            <ImageView
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_layers"
+                                app:tint="#587368" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="9dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/SF.Text.Mono"
+                                android:fontFamily="monospace"
+                                android:letterSpacing="-0.03"
+                                android:text="batch_stok"
+                                android:textSize="11sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                style="@style/SF.Text.Caption"
+                                android:layout_marginTop="2dp"
+                                android:text="Batch + tanggal kedaluwarsa" />
+                        </LinearLayout>
+
+                        <TextView
+                            style="@style/SF.Text"
+                            android:layout_marginStart="9dp"
+                            android:background="@drawable/bg_schema_count"
+                            android:fontFamily="@font/plus_jakarta_sans_extrabold"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="3dp"
+                            android:text="7"
+                            android:textColor="@color/sf_brand"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <View
+                        style="@style/SF.Divider" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="11dp"
+                        android:paddingBottom="11dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="0dp"
+                            android:text="id"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="barang_id"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="nomor_batch"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="jumlah_awal"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="0dp"
+                            android:text="jumlah_sisa"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="tanggal_kedaluwarsa"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="status"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="0dp"
+                            android:text="status_penanganan"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="catatan_penanganan"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- mutasi_stok -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/bg_card_12"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="11dp"
+                        android:paddingVertical="10dp">
+
+                        <FrameLayout
+                            android:layout_width="29dp"
+                            android:layout_height="29dp"
+                            android:background="@drawable/bg_schema_ic">
+
+                            <ImageView
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_swap_horiz"
+                                app:tint="#587368" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="9dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/SF.Text.Mono"
+                                android:fontFamily="monospace"
+                                android:letterSpacing="-0.03"
+                                android:text="mutasi_stok"
+                                android:textSize="11sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                style="@style/SF.Text.Caption"
+                                android:layout_marginTop="2dp"
+                                android:text="Audit masuk/keluar/penyesuaian" />
+                        </LinearLayout>
+
+                        <TextView
+                            style="@style/SF.Text"
+                            android:layout_marginStart="9dp"
+                            android:background="@drawable/bg_schema_count"
+                            android:fontFamily="@font/plus_jakarta_sans_extrabold"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="3dp"
+                            android:text="9"
+                            android:textColor="@color/sf_brand"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <View
+                        style="@style/SF.Divider" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="11dp"
+                        android:paddingBottom="11dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="0dp"
+                            android:text="id"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="batch_id"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="jenis"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="jumlah"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="catatan"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="0dp"
+                            android:text="user_id"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="waktu"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- lampiran -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/bg_card_12"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="11dp"
+                        android:paddingVertical="10dp">
+
+                        <FrameLayout
+                            android:layout_width="29dp"
+                            android:layout_height="29dp"
+                            android:background="@drawable/bg_schema_ic">
+
+                            <ImageView
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_image"
+                                app:tint="#587368" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="9dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/SF.Text.Mono"
+                                android:fontFamily="monospace"
+                                android:letterSpacing="-0.03"
+                                android:text="lampiran"
+                                android:textSize="11sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                style="@style/SF.Text.Caption"
+                                android:layout_marginTop="2dp"
+                                android:text="Foto bukti batch/penanganan" />
+                        </LinearLayout>
+
+                        <TextView
+                            style="@style/SF.Text"
+                            android:layout_marginStart="9dp"
+                            android:background="@drawable/bg_pill_muted"
+                            android:fontFamily="@font/plus_jakarta_sans_extrabold"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="3dp"
+                            android:text="0"
+                            android:textColor="@color/sf_muted"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <View
+                        style="@style/SF.Divider" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="11dp"
+                        android:paddingBottom="11dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="0dp"
+                            android:text="id"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="batch_id"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="jenis"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="path"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="created_at"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="0dp"
+                            android:text="updated_at"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- riwayat_aktivitas -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/bg_card_12"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="11dp"
+                        android:paddingVertical="10dp">
+
+                        <FrameLayout
+                            android:layout_width="29dp"
+                            android:layout_height="29dp"
+                            android:background="@drawable/bg_schema_ic">
+
+                            <ImageView
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_history"
+                                app:tint="#587368" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="9dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/SF.Text.Mono"
+                                android:fontFamily="monospace"
+                                android:letterSpacing="-0.03"
+                                android:text="riwayat_aktivitas"
+                                android:textSize="11sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                style="@style/SF.Text.Caption"
+                                android:layout_marginTop="2dp"
+                                android:text="Audit log pengguna (immutable)" />
+                        </LinearLayout>
+
+                        <TextView
+                            style="@style/SF.Text"
+                            android:layout_marginStart="9dp"
+                            android:background="@drawable/bg_schema_count"
+                            android:fontFamily="@font/plus_jakarta_sans_extrabold"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="3dp"
+                            android:text="7"
+                            android:textColor="@color/sf_brand"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <View
+                        style="@style/SF.Divider" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="11dp"
+                        android:paddingBottom="11dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="0dp"
+                            android:text="id"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="user_id"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="aksi"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="entitas"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="entitas_id"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="0dp"
+                            android:text="keterangan"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="waktu"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- notifikasi -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/bg_card_12"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="11dp"
+                        android:paddingVertical="10dp">
+
+                        <FrameLayout
+                            android:layout_width="29dp"
+                            android:layout_height="29dp"
+                            android:background="@drawable/bg_schema_ic">
+
+                            <ImageView
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_bell"
+                                app:tint="#587368" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="9dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/SF.Text.Mono"
+                                android:fontFamily="monospace"
+                                android:letterSpacing="-0.03"
+                                android:text="notifikasi"
+                                android:textSize="11sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                style="@style/SF.Text.Caption"
+                                android:layout_marginTop="2dp"
+                                android:text="Peringatan harian untuk Android" />
+                        </LinearLayout>
+
+                        <TextView
+                            style="@style/SF.Text"
+                            android:layout_marginStart="9dp"
+                            android:background="@drawable/bg_schema_count"
+                            android:fontFamily="@font/plus_jakarta_sans_extrabold"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="3dp"
+                            android:text="4"
+                            android:textColor="@color/sf_brand"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <View
+                        style="@style/SF.Divider" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="11dp"
+                        android:paddingBottom="11dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="0dp"
+                            android:text="id"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="jenis"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="barang_id"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="batch_id"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="pesan"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="0dp"
+                            android:text="tanggal"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="ditampilkan_pada"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="created_at"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- pengaturan -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/bg_card_12"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="11dp"
+                        android:paddingVertical="10dp">
+
+                        <FrameLayout
+                            android:layout_width="29dp"
+                            android:layout_height="29dp"
+                            android:background="@drawable/bg_schema_ic">
+
+                            <ImageView
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_settings"
+                                app:tint="#587368" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="9dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/SF.Text.Mono"
+                                android:fontFamily="monospace"
+                                android:letterSpacing="-0.03"
+                                android:text="pengaturan"
+                                android:textSize="11sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                style="@style/SF.Text.Caption"
+                                android:layout_marginTop="2dp"
+                                android:text="Key-value pengaturan" />
+                        </LinearLayout>
+
+                        <TextView
+                            style="@style/SF.Text"
+                            android:layout_marginStart="9dp"
+                            android:background="@drawable/bg_schema_count"
+                            android:fontFamily="@font/plus_jakarta_sans_extrabold"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="3dp"
+                            android:text="3"
+                            android:textColor="@color/sf_brand"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <View
+                        style="@style/SF.Divider" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="11dp"
+                        android:paddingBottom="11dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="0dp"
+                            android:text="kunci"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="nilai"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="updated_at"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- personal_access_tokens -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/bg_card_12"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="11dp"
+                        android:paddingVertical="10dp">
+
+                        <FrameLayout
+                            android:layout_width="29dp"
+                            android:layout_height="29dp"
+                            android:background="@drawable/bg_schema_ic">
+
+                            <ImageView
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_key"
+                                app:tint="#587368" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="9dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/SF.Text.Mono"
+                                android:fontFamily="monospace"
+                                android:letterSpacing="-0.03"
+                                android:text="personal_access_tokens"
+                                android:textSize="11sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                style="@style/SF.Text.Caption"
+                                android:layout_marginTop="2dp"
+                                android:text="Token Sanctum (0 di mockup)" />
+                        </LinearLayout>
+
+                        <TextView
+                            style="@style/SF.Text"
+                            android:layout_marginStart="9dp"
+                            android:background="@drawable/bg_pill_muted"
+                            android:fontFamily="@font/plus_jakarta_sans_extrabold"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="3dp"
+                            android:text="0"
+                            android:textColor="@color/sf_muted"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <View
+                        style="@style/SF.Divider" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="11dp"
+                        android:paddingBottom="11dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="0dp"
+                            android:text="id"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="tokenable_type"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="tokenable_id"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="name"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="0dp"
+                            android:text="token"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="abilities"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="expires_at"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="2dp">
+
+                <TextView
+                    style="@style/SF.Text.Section"
+                    android:text="View"
+                    android:textSize="13sp" />
+
+                <TextView
+                    style="@style/SF.Text.Caption"
+                    android:layout_marginTop="3dp"
+                    android:text="Dihitung langsung dari data live" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <!-- v_stok_tersedia -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/bg_card_12"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="11dp"
+                        android:paddingVertical="10dp">
+
+                        <FrameLayout
+                            android:layout_width="29dp"
+                            android:layout_height="29dp"
+                            android:background="@drawable/bg_schema_ic">
+
+                            <ImageView
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_chart"
+                                app:tint="#587368" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="9dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/SF.Text.Mono"
+                                android:fontFamily="monospace"
+                                android:letterSpacing="-0.03"
+                                android:text="v_stok_tersedia"
+                                android:textSize="11sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                style="@style/SF.Text.Caption"
+                                android:layout_marginTop="2dp"
+                                android:text="SUM(jumlah_sisa) batch belum kedaluwarsa &amp; belum ditangani" />
+                        </LinearLayout>
+
+                        <TextView
+                            style="@style/SF.Text"
+                            android:layout_marginStart="9dp"
+                            android:background="@drawable/bg_schema_count"
+                            android:fontFamily="@font/plus_jakarta_sans_extrabold"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="3dp"
+                            android:text="5"
+                            android:textColor="@color/sf_brand"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <View
+                        style="@style/SF.Divider" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="11dp"
+                        android:paddingBottom="11dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="0dp"
+                            android:text="barang_id"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="kode_sku"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="nama"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="0dp"
+                            android:text="total_stok_tersedia"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="status_stok"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- v_perlu_ditangani -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/bg_card_12"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="11dp"
+                        android:paddingVertical="10dp">
+
+                        <FrameLayout
+                            android:layout_width="29dp"
+                            android:layout_height="29dp"
+                            android:background="@drawable/bg_schema_ic">
+
+                            <ImageView
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_alert_triangle"
+                                app:tint="#587368" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="9dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/SF.Text.Mono"
+                                android:fontFamily="monospace"
+                                android:letterSpacing="-0.03"
+                                android:text="v_perlu_ditangani"
+                                android:textSize="11sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                style="@style/SF.Text.Caption"
+                                android:layout_marginTop="2dp"
+                                android:text="Batch Kedaluwarsa yang belum Ditangani" />
+                        </LinearLayout>
+
+                        <TextView
+                            style="@style/SF.Text"
+                            android:layout_marginStart="9dp"
+                            android:background="@drawable/bg_schema_count"
+                            android:fontFamily="@font/plus_jakarta_sans_extrabold"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="3dp"
+                            android:text="1"
+                            android:textColor="@color/sf_brand"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <View
+                        style="@style/SF.Divider" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="11dp"
+                        android:paddingBottom="11dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="0dp"
+                            android:text="batch_id"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="barang_id"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="nama_barang"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="0dp"
+                            android:text="nomor_batch"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="jumlah_sisa"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="0dp"
+                            android:text="tanggal_kedaluwarsa"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            style="@style/SF.Text.BatchCode"
+                            android:layout_marginStart="4dp"
+                            android:text="sisa_hari"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="2dp">
+
+                <TextView
+                    style="@style/SF.Text.Section"
+                    android:text="Aturan penting"
+                    android:textSize="13sp" />
+
+                <TextView
+                    style="@style/SF.Text.Caption"
+                    android:layout_marginTop="3dp"
+                    android:text="Konsistensi dengan SQL" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:layout_marginTop="1dp"
+                            android:src="@drawable/ic_check_circle"
+                            app:tint="@color/sf_brand" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="7dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/SF.Text"
+                                android:fontFamily="@font/plus_jakarta_sans_extrabold"
+                                android:text="Stok tersedia"
+                                android:textColor="@color/sf_ink"
+                                android:textSize="11sp" />
+
+                            <TextView
+                                style="@style/SF.Text"
+                                android:layout_marginTop="1dp"
+                                android:lineSpacingMultiplier="1.3"
+                                android:text="= Σ jumlah_sisa batch dengan tanggal_kedaluwarsa ≥ hari ini dan status ≠ Ditangani."
+                                android:textColor="#556B5F"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:layout_marginTop="1dp"
+                            android:src="@drawable/ic_check_circle"
+                            app:tint="@color/sf_brand" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="7dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/SF.Text"
+                                android:fontFamily="@font/plus_jakarta_sans_extrabold"
+                                android:text="Status"
+                                android:textColor="@color/sf_ink"
+                                android:textSize="11sp" />
+
+                            <TextView
+                                style="@style/SF.Text"
+                                android:layout_marginTop="1dp"
+                                android:lineSpacingMultiplier="1.3"
+                                android:text="dihitung dari sisa hari: &lt;0 Kedaluwarsa, 0–30 Mendekati, &gt;30 Aman; Ditangani manual."
+                                android:textColor="#556B5F"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:layout_marginTop="1dp"
+                            android:src="@drawable/ic_check_circle"
+                            app:tint="@color/sf_brand" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="7dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/SF.Text"
+                                android:fontFamily="@font/plus_jakarta_sans_extrabold"
+                                android:text="FEFO"
+                                android:textColor="@color/sf_ink"
+                                android:textSize="11sp" />
+
+                            <TextView
+                                style="@style/SF.Text"
+                                android:layout_marginTop="1dp"
+                                android:lineSpacingMultiplier="1.3"
+                                android:text="memakai urutan tanggal_kedaluwarsa; satu pengeluaran dapat menghasilkan beberapa baris mutasi keluar."
+                                android:textColor="#556B5F"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:layout_marginTop="1dp"
+                            android:src="@drawable/ic_check_circle"
+                            app:tint="@color/sf_brand" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="7dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/SF.Text"
+                                android:fontFamily="@font/plus_jakarta_sans_extrabold"
+                                android:text="Soft delete"
+                                android:textColor="@color/sf_ink"
+                                android:textSize="11sp" />
+
+                            <TextView
+                                style="@style/SF.Text"
+                                android:layout_marginTop="1dp"
+                                android:lineSpacingMultiplier="1.3"
+                                android:text="memakai deleted_at + deleted_by; SKU dan nomor batch hanya unik di antara data aktif."
+                                android:textColor="#556B5F"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:layout_marginTop="1dp"
+                            android:src="@drawable/ic_info"
+                            app:tint="@color/sf_brand" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="7dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/SF.Text"
+                                android:fontFamily="@font/plus_jakarta_sans_extrabold"
+                                android:text="Tidak ada harga."
+                                android:textColor="@color/sf_ink"
+                                android:textSize="11sp" />
+
+                            <TextView
+                                style="@style/SF.Text"
+                                android:layout_marginTop="1dp"
+                                android:lineSpacingMultiplier="1.3"
+                                android:text="Skema hanya mencatat kuantitas, satuan, batch, mutasi, dan kedaluwarsa."
+                                android:textColor="#556B5F"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+            </LinearLayout>
+
+            <!-- Aksi -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/SF.Btn.Ghost"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/ic12_download"
+                    android:text="Unduh JSON" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_btn_danger_soft"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/ic_refresh"
+                        app:tint="@color/sf_danger" />
+
+                    <TextView
+                        style="@style/SF.Text"
+                        android:layout_marginStart="7dp"
+                        android:fontFamily="@font/plus_jakarta_sans_bold"
+                        android:text="Reset data"
+                        android:textColor="@color/sf_danger"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Catatan sumber -->
+            <TextView
+                style="@style/SF.Text.Caption"
+                android:layout_marginTop="16dp"
+                android:drawableStart="@drawable/ic12_database"
+                android:drawablePadding="4dp"
+                android:drawableTint="@color/sf_muted_2"
+                android:padding="2dp"
+                android:text="Sumber: stockflow_database.sql · 10 tabel (termasuk Sanctum) &amp; 2 view · data uji relatif hari ini"
+                android:textColor="@color/sf_muted_2" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Halaman notifikasi — draft.html notificationsPage().
+  Seed: 4 entri (2 mendekati, 1 kedaluwarsa, 1 stok menipis), semuanya belum dibaca.
+  Tanpa tab bar (sub-halaman).
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sf_bg"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText,ContentDescription,UseCompatTextViewDrawableXml">
+
+    <!-- Topbar sub-halaman -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_topbar_sub"
+        android:gravity="center_vertical"
+        android:minHeight="62dp"
+        android:orientation="horizontal"
+        android:paddingStart="18dp"
+        android:paddingTop="17dp"
+        android:paddingEnd="18dp"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            style="@style/SF.IconBtn.Boxed"
+            android:src="@drawable/ic_arrow_left" />
+
+        <TextView
+            style="@style/SF.Text.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="Notifikasi"
+            android:textSize="18sp" />
+
+        <ImageView
+            style="@style/SF.IconBtn.Boxed"
+            android:src="@drawable/ic_check_circle" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="18dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="18dp"
+            android:paddingBottom="26dp">
+
+            <!-- Ringkasan belum dibaca -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/SF.Text.Eyebrow"
+                        android:text="Notifikasi hari ini" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:gravity="bottom"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/SF.Text"
+                            android:fontFamily="@font/plus_jakarta_sans_extrabold"
+                            android:letterSpacing="-0.03"
+                            android:text="4"
+                            android:textColor="@color/sf_ink"
+                            android:textSize="26sp" />
+
+                        <TextView
+                            style="@style/SF.Text"
+                            android:layout_marginStart="5dp"
+                            android:paddingBottom="3dp"
+                            android:text="belum dibaca"
+                            android:textColor="@color/sf_muted"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/bg_ic_warn">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_bell"
+                        app:tint="@color/sf_warn" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <!-- Chip filter -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="1dp"
+                    android:paddingBottom="3dp">
+
+                    <TextView
+                        style="@style/SF.Chip.Active"
+                        android:text="Semua" />
+
+                    <TextView
+                        style="@style/SF.Chip"
+                        android:layout_marginStart="7dp"
+                        android:text="Mendekati" />
+
+                    <TextView
+                        style="@style/SF.Chip"
+                        android:layout_marginStart="7dp"
+                        android:text="Kedaluwarsa" />
+
+                    <TextView
+                        style="@style/SF.Chip"
+                        android:layout_marginStart="7dp"
+                        android:text="Stok Menipis" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- 1 Mendekati — MGN-2411B -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/bg_card_unread">
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/bg_unread_accent" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="13dp"
+                    android:paddingTop="11dp"
+                    android:paddingEnd="11dp"
+                    android:paddingBottom="11dp">
+
+                    <FrameLayout
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/bg_ic_warn">
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_clock"
+                            app:tint="@color/sf_warn" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/SF.Text"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/plus_jakarta_sans_bold"
+                                android:text="Mendekati Kedaluwarsa"
+                                android:textColor="@color/sf_ink"
+                                android:textSize="12sp" />
+
+                            <View
+                                android:layout_width="6dp"
+                                android:layout_height="6dp"
+                                android:layout_marginStart="6dp"
+                                android:background="@drawable/dot_brand" />
+                        </LinearLayout>
+
+                        <TextView
+                            style="@style/SF.Text"
+                            android:layout_marginTop="3dp"
+                            android:lineSpacingMultiplier="1.45"
+                            android:text="Batch MGN-2411B (Indomie Goreng) mendekati kedaluwarsa: 30 hari lagi."
+                            android:textColor="@color/sf_muted"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            style="@style/SF.Pill.Warn"
+                            android:layout_marginTop="5dp"
+                            android:drawableStart="@drawable/ic12_clock"
+                            android:text="Mendekati" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="11dp"
+                                android:layout_height="11dp"
+                                android:src="@drawable/ic_clock"
+                                app:tint="@color/sf_muted_2" />
+
+                            <TextView
+                                style="@style/SF.Text.Caption"
+                                android:layout_marginStart="3dp"
+                                android:text="30 Okt 2026 · 06.00 WIB"
+                                android:textSize="9sp" />
+
+                            <TextView
+                                style="@style/SF.Text.Link"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_weight="1"
+                                android:drawableEnd="@drawable/ic12_chevron_right"
+                                android:gravity="end"
+                                android:text="Lihat batch"
+                                android:textSize="10sp" />
+
+                            <ImageView
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
+                                android:layout_marginStart="7dp"
+                                android:background="@drawable/bg_iconbtn_boxed"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:padding="7dp"
+                                android:src="@drawable/ic_check"
+                                app:tint="@color/sf_muted" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+            <!-- 2 Mendekati — MLK-2411A -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_card_unread">
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/bg_unread_accent" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="13dp"
+                    android:paddingTop="11dp"
+                    android:paddingEnd="11dp"
+                    android:paddingBottom="11dp">
+
+                    <FrameLayout
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/bg_ic_warn">
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_clock"
+                            app:tint="@color/sf_warn" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/SF.Text"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/plus_jakarta_sans_bold"
+                                android:text="Mendekati Kedaluwarsa"
+                                android:textColor="@color/sf_ink"
+                                android:textSize="12sp" />
+
+                            <View
+                                android:layout_width="6dp"
+                                android:layout_height="6dp"
+                                android:layout_marginStart="6dp"
+                                android:background="@drawable/dot_brand" />
+                        </LinearLayout>
+
+                        <TextView
+                            style="@style/SF.Text"
+                            android:layout_marginTop="3dp"
+                            android:lineSpacingMultiplier="1.45"
+                            android:text="Batch MLK-2411A (Ultra Milk 250ml) mendekati kedaluwarsa: 25 hari lagi."
+                            android:textColor="@color/sf_muted"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            style="@style/SF.Pill.Warn"
+                            android:layout_marginTop="5dp"
+                            android:drawableStart="@drawable/ic12_clock"
+                            android:text="Mendekati" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="11dp"
+                                android:layout_height="11dp"
+                                android:src="@drawable/ic_clock"
+                                app:tint="@color/sf_muted_2" />
+
+                            <TextView
+                                style="@style/SF.Text.Caption"
+                                android:layout_marginStart="3dp"
+                                android:text="30 Okt 2026 · 06.00 WIB"
+                                android:textSize="9sp" />
+
+                            <TextView
+                                style="@style/SF.Text.Link"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_weight="1"
+                                android:drawableEnd="@drawable/ic12_chevron_right"
+                                android:gravity="end"
+                                android:text="Lihat batch"
+                                android:textSize="10sp" />
+
+                            <ImageView
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
+                                android:layout_marginStart="7dp"
+                                android:background="@drawable/bg_iconbtn_boxed"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:padding="7dp"
+                                android:src="@drawable/ic_check"
+                                app:tint="@color/sf_muted" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+            <!-- 3 Kedaluwarsa — MLK-2411B -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_card_unread">
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/bg_unread_accent" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="13dp"
+                    android:paddingTop="11dp"
+                    android:paddingEnd="11dp"
+                    android:paddingBottom="11dp">
+
+                    <FrameLayout
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/bg_ic_danger">
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_alert_triangle"
+                            app:tint="@color/sf_danger" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/SF.Text"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/plus_jakarta_sans_bold"
+                                android:text="Kedaluwarsa"
+                                android:textColor="@color/sf_ink"
+                                android:textSize="12sp" />
+
+                            <View
+                                android:layout_width="6dp"
+                                android:layout_height="6dp"
+                                android:layout_marginStart="6dp"
+                                android:background="@drawable/dot_brand" />
+                        </LinearLayout>
+
+                        <TextView
+                            style="@style/SF.Text"
+                            android:layout_marginTop="3dp"
+                            android:lineSpacingMultiplier="1.45"
+                            android:text="Batch MLK-2411B (Ultra Milk 250ml) sudah kedaluwarsa. Perlu ditangani."
+                            android:textColor="@color/sf_muted"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            style="@style/SF.Pill.Danger"
+                            android:layout_marginTop="5dp"
+                            android:drawableStart="@drawable/ic12_alert_triangle"
+                            android:text="Kedaluwarsa" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="11dp"
+                                android:layout_height="11dp"
+                                android:src="@drawable/ic_clock"
+                                app:tint="@color/sf_muted_2" />
+
+                            <TextView
+                                style="@style/SF.Text.Caption"
+                                android:layout_marginStart="3dp"
+                                android:text="30 Okt 2026 · 06.00 WIB"
+                                android:textSize="9sp" />
+
+                            <TextView
+                                style="@style/SF.Text.Link"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_weight="1"
+                                android:drawableEnd="@drawable/ic12_chevron_right"
+                                android:gravity="end"
+                                android:text="Lihat batch"
+                                android:textSize="10sp" />
+
+                            <ImageView
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
+                                android:layout_marginStart="7dp"
+                                android:background="@drawable/bg_iconbtn_boxed"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:padding="7dp"
+                                android:src="@drawable/ic_check"
+                                app:tint="@color/sf_muted" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+            <!-- 4 Stok Menipis — Sunlight -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_card_unread">
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/bg_unread_accent" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="13dp"
+                    android:paddingTop="11dp"
+                    android:paddingEnd="11dp"
+                    android:paddingBottom="11dp">
+
+                    <FrameLayout
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/bg_ic_info">
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_alert_circle"
+                            app:tint="@color/sf_info" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/SF.Text"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/plus_jakarta_sans_bold"
+                                android:text="Stok Menipis"
+                                android:textColor="@color/sf_ink"
+                                android:textSize="12sp" />
+
+                            <View
+                                android:layout_width="6dp"
+                                android:layout_height="6dp"
+                                android:layout_marginStart="6dp"
+                                android:background="@drawable/dot_brand" />
+                        </LinearLayout>
+
+                        <TextView
+                            style="@style/SF.Text"
+                            android:layout_marginTop="3dp"
+                            android:lineSpacingMultiplier="1.45"
+                            android:text="Stok Sunlight 755ml menipis: sisa 5 pcs, minimum 15 pcs."
+                            android:textColor="@color/sf_muted"
+                            android:textSize="11sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="11dp"
+                                android:layout_height="11dp"
+                                android:src="@drawable/ic_clock"
+                                app:tint="@color/sf_muted_2" />
+
+                            <TextView
+                                style="@style/SF.Text.Caption"
+                                android:layout_marginStart="3dp"
+                                android:text="30 Okt 2026 · 06.00 WIB"
+                                android:textSize="9sp" />
+
+                            <TextView
+                                style="@style/SF.Text.Link"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_weight="1"
+                                android:drawableEnd="@drawable/ic12_chevron_right"
+                                android:gravity="end"
+                                android:text="Lihat barang"
+                                android:textSize="10sp" />
+
+                            <ImageView
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
+                                android:layout_marginStart="7dp"
+                                android:background="@drawable/bg_iconbtn_boxed"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:padding="7dp"
+                                android:src="@drawable/ic_check"
+                                app:tint="@color/sf_muted" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+            <!-- Info penjadwal -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_alert_info"
+                android:orientation="horizontal"
+                android:paddingHorizontal="11dp"
+                android:paddingVertical="10dp">
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_marginTop="1dp"
+                    android:src="@drawable/ic_calendar_clock"
+                    app:tint="@color/sf_info_ink" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/SF.Text"
+                        android:fontFamily="@font/plus_jakarta_sans_bold"
+                        android:text="Dibuat penjadwal Laravel."
+                        android:textColor="@color/sf_info_ink"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        style="@style/SF.Text"
+                        android:layout_marginTop="2dp"
+                        android:lineSpacingMultiplier="1.35"
+                        android:text="Pukul 06.00 &amp; 18.00 WIB, lalu dibaca WorkManager tiap 12 jam. Satu baris per jenis per batch/barang per hari."
+                        android:textColor="@color/sf_info_ink"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Catatan sumber -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="2dp">
+
+                <ImageView
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:src="@drawable/ic_database"
+                    app:tint="@color/sf_muted_2" />
+
+                <TextView
+                    style="@style/SF.Text.Caption"
+                    android:layout_marginStart="6dp"
+                    android:text="Sumber: notifikasi · 4 baris · semua belum ditampilkan" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

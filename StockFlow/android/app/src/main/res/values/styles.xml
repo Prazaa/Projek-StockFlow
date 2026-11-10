@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Style komponen edisi database — dipetakan dari kelas CSS draft.html.
+  Skala teks: 7-8px -> 10sp, 8.5-9px -> 11sp, 9.5-10px -> 12sp, 11px -> 13sp,
+  13-15px -> 14-15sp, 17-19px -> 18-20sp. Bobot 750 -> bold.
+-->
+<resources>
+
+    <!-- ===== Teks ===== -->
+    <style name="SF.Text" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/sf_text</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="SF.Text.Eyebrow">
+        <item name="android:textColor">@color/sf_muted</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:fontFamily">@font/plus_jakarta_sans_extrabold</item>
+        <item name="android:letterSpacing">0.12</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="SF.Text.Heading">
+        <item name="android:textColor">@color/sf_ink</item>
+        <item name="android:textSize">19sp</item>
+        <item name="android:fontFamily">@font/plus_jakarta_sans_extrabold</item>
+        <item name="android:letterSpacing">-0.02</item>
+    </style>
+
+    <style name="SF.Text.Title">
+        <item name="android:textColor">@color/sf_ink</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:fontFamily">@font/plus_jakarta_sans_extrabold</item>
+        <item name="android:letterSpacing">-0.02</item>
+    </style>
+
+    <style name="SF.Text.Section">
+        <item name="android:textColor">@color/sf_ink</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/plus_jakarta_sans_extrabold</item>
+        <item name="android:letterSpacing">-0.01</item>
+    </style>
+
+    <style name="SF.Text.RowTitle">
+        <item name="android:textColor">@color/sf_ink</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">@font/plus_jakarta_sans_bold</item>
+    </style>
+
+    <style name="SF.Text.RowSub">
+        <item name="android:textColor">@color/sf_muted</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:lineSpacingMultiplier">1.15</item>
+    </style>
+
+    <style name="SF.Text.Muted">
+        <item name="android:textColor">@color/sf_muted</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+    </style>
+
+    <style name="SF.Text.Caption">
+        <item name="android:textColor">@color/sf_muted</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="SF.Text.Strong">
+        <item name="android:textColor">@color/sf_ink</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/plus_jakarta_sans_bold</item>
+    </style>
+
+    <style name="SF.Text.Value">
+        <item name="android:textColor">@color/sf_ink</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/plus_jakarta_sans_extrabold</item>
+        <item name="android:letterSpacing">-0.03</item>
+    </style>
+
+    <style name="SF.Text.Link">
+        <item name="android:textColor">@color/sf_brand</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/plus_jakarta_sans_bold</item>
+        <item name="android:drawablePadding">2dp</item>
+        <item name="android:drawableTint">@color/sf_brand</item>
+    </style>
+
+    <style name="SF.Text.Mono">
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/sf_ink</item>
+    </style>
+
+    <style name="SF.Text.Label">
+        <item name="android:textColor">@color/sf_label</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:fontFamily">@font/plus_jakarta_sans_bold</item>
+    </style>
+
+    <style name="SF.Text.BatchCode">
+        <item name="android:background">@drawable/bg_batch_code</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:paddingStart">5dp</item>
+        <item name="android:paddingEnd">5dp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingBottom">2dp</item>
+        <item name="android:textColor">#567268</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- ===== Pill status ===== -->
+    <style name="SF.Pill" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:drawablePadding">4dp</item>
+        <item name="android:fontFamily">@font/plus_jakarta_sans_bold</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+    <style name="SF.Pill.Safe">
+        <item name="android:background">@drawable/bg_pill_safe</item>
+        <item name="android:textColor">@color/sf_safe</item>
+        <item name="android:drawableTint">@color/sf_safe</item>
+    </style>
+    <style name="SF.Pill.Warn">
+        <item name="android:background">@drawable/bg_pill_warn</item>
+        <item name="android:textColor">@color/sf_warn</item>
+        <item name="android:drawableTint">@color/sf_warn</item>
+    </style>
+    <style name="SF.Pill.Danger">
+        <item name="android:background">@drawable/bg_pill_danger</item>
+        <item name="android:textColor">@color/sf_danger</item>
+        <item name="android:drawableTint">@color/sf_danger</item>
+    </style>
+    <style name="SF.Pill.Muted">
+        <item name="android:background">@drawable/bg_pill_muted</item>
+        <item name="android:textColor">#6D8076</item>
+        <item name="android:drawableTint">#6D8076</item>
+    </style>
+    <style name="SF.Pill.Info">
+        <item name="android:background">@drawable/bg_pill_info</item>
+        <item name="android:textColor">@color/sf_info</item>
+        <item name="android:drawableTint">@color/sf_info</item>
+    </style>
+    <style name="SF.Pill.Violet">
+        <item name="android:background">@drawable/bg_pill_violet</item>
+        <item name="android:textColor">@color/sf_violet</item>
+        <item name="android:drawableTint">@color/sf_violet</item>
+    </style>
+    <style name="SF.Pill.Brand">
+        <item name="android:background">@drawable/bg_pill_brand</item>
+        <item name="android:textColor">@color/sf_brand</item>
+        <item name="android:drawableTint">@color/sf_brand</item>
+    </style>
+    <style name="SF.Pill.Outline">
+        <item name="android:background">@drawable/bg_pill_outline</item>
+        <item name="android:textColor">@color/sf_muted</item>
+        <item name="android:drawableTint">@color/sf_muted</item>
+    </style>
+
+    <!-- ===== Tombol (TextView clickable) ===== -->
+    <style name="SF.Btn" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:drawablePadding">7dp</item>
+        <item name="android:fontFamily">@font/plus_jakarta_sans_bold</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+    <style name="SF.Btn.Primary">
+        <item name="android:background">@drawable/bg_btn_primary</item>
+        <item name="android:textColor">@color/sf_on_brand</item>
+        <item name="android:drawableTint">@color/sf_on_brand</item>
+    </style>
+    <style name="SF.Btn.Dark">
+        <item name="android:background">@drawable/bg_btn_dark</item>
+        <item name="android:textColor">@color/sf_on_brand</item>
+        <item name="android:drawableTint">@color/sf_on_brand</item>
+    </style>
+    <style name="SF.Btn.Ghost">
+        <item name="android:background">@drawable/bg_btn_ghost</item>
+        <item name="android:textColor">@color/sf_ghost_text</item>
+        <item name="android:drawableTint">@color/sf_ghost_text</item>
+    </style>
+    <style name="SF.Btn.Soft">
+        <item name="android:background">@drawable/bg_btn_soft</item>
+        <item name="android:textColor">@color/sf_brand</item>
+        <item name="android:drawableTint">@color/sf_brand</item>
+    </style>
+    <style name="SF.Btn.Danger">
+        <item name="android:background">@drawable/bg_btn_danger</item>
+        <item name="android:textColor">@color/sf_on_brand</item>
+        <item name="android:drawableTint">@color/sf_on_brand</item>
+    </style>
+    <style name="SF.Btn.DangerSoft">
+        <item name="android:background">@drawable/bg_btn_danger_soft</item>
+        <item name="android:textColor">@color/sf_danger</item>
+        <item name="android:drawableTint">@color/sf_danger</item>
+    </style>
+    <style name="SF.Btn.Sm">
+        <item name="android:layout_height">36dp</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <!-- Tombol ikon 36dp -->
+    <style name="SF.IconBtn" parent="">
+        <item name="android:layout_width">@dimen/sf_icon_btn</item>
+        <item name="android:layout_height">@dimen/sf_icon_btn</item>
+        <item name="android:padding">9dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:tint">@color/sf_icon_gray</item>
+    </style>
+    <style name="SF.IconBtn.Boxed">
+        <item name="android:background">@drawable/bg_iconbtn_boxed</item>
+    </style>
+
+    <!-- ===== Kartu & wadah ===== -->
+    <style name="SF.Card" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@drawable/bg_card</item>
+        <item name="android:padding">15dp</item>
+    </style>
+    <style name="SF.Card.Tint">
+        <item name="android:background">@drawable/bg_card_tint</item>
+    </style>
+
+    <style name="SF.Divider" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/sf_line</item>
+    </style>
+
+    <!-- ===== Chip ===== -->
+    <style name="SF.Chip" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:background">@drawable/bg_chip</item>
+        <item name="android:gravity">center</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:fontFamily">@font/plus_jakarta_sans_bold</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/sf_chip_text</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+    <style name="SF.Chip.Active">
+        <item name="android:background">@drawable/bg_chip_active</item>
+        <item name="android:textColor">@color/sf_on_brand</item>
+    </style>
+
+    <!-- ===== Input ===== -->
+    <style name="SF.Input" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">42dp</item>
+        <item name="android:background">@drawable/bg_input</item>
+        <item name="android:padding">11dp</item>
+        <item name="android:textColor">@color/sf_ink</item>
+        <item name="android:textColorHint">#A1B0A8</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:inputType">text</item>
+    </style>
+
+    <!-- ===== Progress 4dp ===== -->
+    <style name="SF.Progress" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">4dp</item>
+        <item name="android:max">100</item>
+        <item name="android:progressDrawable">@drawable/progress_safe</item>
+    </style>
+    <style name="SF.Progress.Warn">
+        <item name="android:progressDrawable">@drawable/progress_warn</item>
+    </style>
+    <style name="SF.Progress.Danger">
+        <item name="android:progressDrawable">@drawable/progress_danger</item>
+    </style>
+    <style name="SF.Progress.Muted">
+        <item name="android:progressDrawable">@drawable/progress_muted</item>
+    </style>
+
+    <!-- ===== Bagian shell ===== -->
+    <style name="SF.Tab" parent="">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+    <style name="SF.Tab.Label">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:fontFamily">@font/plus_jakarta_sans_bold</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/sf_tab_off</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+    <style name="SF.Tab.Label.Active">
+        <item name="android:textColor">@color/sf_brand</item>
+    </style>
+
+    <style name="SF.Row" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingTop">11dp</item>
+        <item name="android:paddingBottom">11dp</item>
+    </style>
+
+</resources>

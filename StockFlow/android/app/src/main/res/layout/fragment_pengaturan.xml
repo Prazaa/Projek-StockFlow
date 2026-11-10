@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Pengaturan aplikasi (pemilik) — draft.html settingsPage(). Sub-halaman tanpa tabbar, aksi bawah Batal/Simpan.
+  Nilai = seed pengaturan: ambang 30 hari, lampiran 2 MB, impor 1000 baris.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sf_bg"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText,ContentDescription,UseCompatTextViewDrawableXml,TextFields,LabelFor">
+
+    <!-- Topbar sub-halaman -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_topbar_sub"
+        android:gravity="center_vertical"
+        android:minHeight="62dp"
+        android:orientation="horizontal"
+        android:paddingStart="18dp"
+        android:paddingTop="17dp"
+        android:paddingEnd="18dp"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            style="@style/SF.IconBtn.Boxed"
+            android:src="@drawable/ic_arrow_left" />
+
+        <TextView
+            style="@style/SF.Text.Title"
+            android:layout_width="0dp"
+            android:layout_marginStart="11dp"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="Pengaturan"
+            android:textSize="18sp" />
+
+        <!-- Notifikasi + badge -->
+        <FrameLayout
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="11dp">
+
+            <ImageView
+                style="@style/SF.IconBtn"
+                android:src="@drawable/ic_bell" />
+
+            <TextView
+                style="@style/SF.Text"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="top|end"
+                android:background="@drawable/bg_badge"
+                android:fontFamily="@font/plus_jakarta_sans_extrabold"
+                android:gravity="center"
+                android:text="4"
+                android:textColor="@color/sf_on_brand"
+                android:textSize="8sp" />
+        </FrameLayout>
+
+        <TextView
+            style="@style/SF.Text"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="7dp"
+            android:background="@drawable/bg_avatar"
+            android:fontFamily="@font/plus_jakarta_sans_extrabold"
+            android:gravity="center"
+            android:text="BS"
+            android:textColor="#17523A"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="18dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="18dp"
+            android:paddingBottom="26dp">
+
+            <!-- settings-head -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="2dp"
+                android:paddingVertical="1dp">
+
+                <TextView
+                    style="@style/SF.Text.Title"
+                    android:text="Pengaturan aplikasi"
+                    android:textSize="16sp" />
+
+                <TextView
+                    style="@style/SF.Text.RowSub"
+                    android:layout_marginTop="3dp"
+                    android:text="Key-value pada tabel pengaturan. Perubahan ambang langsung menghitung ulang status batch." />
+            </LinearLayout>
+
+            <!-- Seksi: Peringatan kedaluwarsa -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_card_16"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="11dp">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/ic_clock"
+                        app:tint="@color/sf_brand" />
+
+                    <TextView
+                        style="@style/SF.Text.Strong"
+                        android:layout_width="0dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_weight="1"
+                        android:text="Peringatan kedaluwarsa" />
+
+                    <TextView
+                        style="@style/SF.Text.Caption"
+                        android:fontFamily="@font/plus_jakarta_sans_bold"
+                        android:letterSpacing="0.07"
+                        android:text="FR-25"
+                        android:textColor="@color/sf_muted_2" />
+                </LinearLayout>
+
+                <View style="@style/SF.Divider" />
+
+                <!-- Ambang peringatan -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingVertical="11dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/SF.Text.Strong"
+                            android:text="Ambang peringatan" />
+
+                        <TextView
+                            style="@style/SF.Text.Caption"
+                            android:layout_marginTop="2dp"
+                            android:lineSpacingMultiplier="1.2"
+                            android:text="Batch dengan sisa hari ≤ nilai ini berstatus Mendekati Kedaluwarsa." />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            style="@style/SF.Input"
+                            android:layout_width="57dp"
+                            android:layout_height="34dp"
+                            android:fontFamily="@font/plus_jakarta_sans_extrabold"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:minHeight="0dp"
+                            android:padding="5dp"
+                            android:text="30"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            style="@style/SF.Text.Caption"
+                            android:layout_marginStart="5dp"
+                            android:text="hari" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View style="@style/SF.Divider" />
+
+                <!-- Batas atas -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingVertical="11dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/SF.Text.Strong"
+                            android:text="Batas atas tepat di ambang" />
+
+                        <TextView
+                            style="@style/SF.Text.Caption"
+                            android:layout_marginTop="2dp"
+                            android:lineSpacingMultiplier="1.2"
+                            android:text="Contoh: +30 hari dengan ambang 30 → Mendekati Kedaluwarsa (bukan Aman)." />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/SF.Pill.Warn"
+                        android:layout_marginStart="10dp"
+                        android:text="Inklusif" />
+                </LinearLayout>
+
+                <View style="@style/SF.Divider" />
+
+                <!-- Zona waktu -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="11dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/SF.Text.Strong"
+                            android:text="Zona waktu" />
+
+                        <TextView
+                            style="@style/SF.Text.Caption"
+                            android:layout_marginTop="2dp"
+                            android:lineSpacingMultiplier="1.2"
+                            android:text="NOW() / CURDATE() memakai WIB di Laragon." />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/SF.Pill.Outline"
+                        android:layout_marginStart="10dp"
+                        android:text="Asia/Jakarta" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Seksi: Lampiran & impor -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/bg_card_16"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="11dp">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/ic_image"
+                        app:tint="@color/sf_brand" />
+
+                    <TextView
+                        style="@style/SF.Text.Strong"
+                        android:layout_width="0dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_weight="1"
+                        android:text="Lampiran &amp; impor" />
+
+                    <TextView
+                        style="@style/SF.Text.Caption"
+                        android:fontFamily="@font/plus_jakarta_sans_bold"
+                        android:letterSpacing="0.07"
+                        android:text="BATAS"
+                        android:textColor="@color/sf_muted_2" />
+                </LinearLayout>
+
+                <View style="@style/SF.Divider" />
+
+                <!-- Ukuran lampiran -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingVertical="11dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/SF.Text.Strong"
+                            android:text="Ukuran maksimum lampiran" />
+
+                        <TextView
+                            style="@style/SF.Text.Caption"
+                            android:layout_marginTop="2dp"
+                            android:lineSpacingMultiplier="1.2"
+                            android:text="JPG/PNG untuk bukti batch dan penanganan." />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            style="@style/SF.Input"
+                            android:layout_width="57dp"
+                            android:layout_height="34dp"
+                            android:fontFamily="@font/plus_jakarta_sans_extrabold"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:minHeight="0dp"
+                            android:padding="5dp"
+                            android:text="2"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            style="@style/SF.Text.Caption"
+                            android:layout_marginStart="5dp"
+                            android:text="MB" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View style="@style/SF.Divider" />
+
+                <!-- Maksimum baris impor -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="11dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/SF.Text.Strong"
+                            android:text="Maksimum baris impor" />
+
+                        <TextView
+                            style="@style/SF.Text.Caption"
+                            android:layout_marginTop="2dp"
+                            android:lineSpacingMultiplier="1.2"
+                            android:text="Batas impor CSV pada backend Laravel." />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            style="@style/SF.Input"
+                            android:layout_width="57dp"
+                            android:layout_height="34dp"
+                            android:fontFamily="@font/plus_jakarta_sans_extrabold"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:minHeight="0dp"
+                            android:padding="5dp"
+                            android:text="1000"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            style="@style/SF.Text.Caption"
+                            android:layout_marginStart="5dp"
+                            android:text="baris" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Seksi: Kategori tetap -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/bg_card_16"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="11dp">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/ic_tag"
+                        app:tint="@color/sf_brand" />
+
+                    <TextView
+                        style="@style/SF.Text.Strong"
+                        android:layout_width="0dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_weight="1"
+                        android:text="Kategori tetap" />
+
+                    <TextView
+                        style="@style/SF.Text.Caption"
+                        android:fontFamily="@font/plus_jakarta_sans_bold"
+                        android:letterSpacing="0.07"
+                        android:text="ENUM"
+                        android:textColor="@color/sf_muted_2" />
+                </LinearLayout>
+
+                <View style="@style/SF.Divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/SF.Chip"
+                        android:text="Makanan" />
+
+                    <TextView
+                        style="@style/SF.Chip"
+                        android:layout_marginStart="6dp"
+                        android:text="Minuman" />
+
+                    <TextView
+                        style="@style/SF.Chip"
+                        android:layout_marginStart="6dp"
+                        android:text="Obat" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/SF.Chip"
+                        android:text="Kebutuhan Rumah" />
+
+                    <TextView
+                        style="@style/SF.Chip"
+                        android:layout_marginStart="6dp"
+                        android:text="Lainnya" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="11dp"
+                        android:layout_height="11dp"
+                        android:layout_marginTop="1dp"
+                        android:src="@drawable/ic_info"
+                        app:tint="@color/sf_muted" />
+
+                    <TextView
+                        style="@style/SF.Text.Caption"
+                        android:layout_marginStart="4dp"
+                        android:lineSpacingMultiplier="1.2"
+                        android:text="Kategori disimpan sebagai enum pada kolom barang.kategori; tidak ada tabel kategori terpisah." />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Seksi: Penjadwal -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/bg_card_16"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="11dp">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/ic_calendar_clock"
+                        app:tint="@color/sf_brand" />
+
+                    <TextView
+                        style="@style/SF.Text.Strong"
+                        android:layout_width="0dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_weight="1"
+                        android:text="Penjadwal" />
+
+                    <TextView
+                        style="@style/SF.Text.Caption"
+                        android:fontFamily="@font/plus_jakarta_sans_bold"
+                        android:letterSpacing="0.07"
+                        android:text="SISTEM"
+                        android:textColor="@color/sf_muted_2" />
+                </LinearLayout>
+
+                <View style="@style/SF.Divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:paddingVertical="9dp">
+
+                    <TextView
+                        style="@style/SF.Text.Caption"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.42"
+                        android:text="Notifikasi"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        style="@style/SF.Text.Strong"
+                        android:layout_width="0dp"
+                        android:layout_marginStart="18dp"
+                        android:layout_weight="0.58"
+                        android:gravity="end"
+                        android:text="06.00 &amp; 18.00 WIB"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <View style="@style/SF.Divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingVertical="9dp">
+
+                    <TextView
+                        style="@style/SF.Text.Caption"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.42"
+                        android:text="WorkManager"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        style="@style/SF.Text.Strong"
+                        android:layout_width="0dp"
+                        android:layout_marginStart="18dp"
+                        android:layout_weight="0.58"
+                        android:gravity="end"
+                        android:text="Setiap 12 jam"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <View style="@style/SF.Divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="9dp">
+
+                    <TextView
+                        style="@style/SF.Text.Caption"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.42"
+                        android:text="Anti-duplikat"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        style="@style/SF.Text.Strong"
+                        android:layout_width="0dp"
+                        android:layout_marginStart="18dp"
+                        android:layout_weight="0.58"
+                        android:gravity="end"
+                        android:text="1 baris / jenis / batch / hari"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- form-note -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/bg_alert_info"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="9dp">
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginTop="1dp"
+                    android:src="@drawable/ic_shield_check"
+                    app:tint="@color/sf_info_ink" />
+
+                <TextView
+                    style="@style/SF.Text"
+                    android:layout_marginStart="6dp"
+                    android:lineSpacingMultiplier="1.3"
+                    android:text="Hanya pemilik yang dapat mengubah pengaturan. Perubahan dicatat sebagai ubah_pengaturan pada riwayat aktivitas."
+                    android:textColor="@color/sf_info_ink"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <!-- Sumber -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <ImageView
+                    android:layout_width="11dp"
+                    android:layout_height="11dp"
+                    android:layout_marginTop="1dp"
+                    android:src="@drawable/ic_database"
+                    app:tint="@color/sf_muted_2" />
+
+                <TextView
+                    style="@style/SF.Text.Caption"
+                    android:layout_marginStart="4dp"
+                    android:text="Sumber: pengaturan · ambang_peringatan_hari, maks_ukuran_lampiran_mb, maks_baris_impor"
+                    android:textColor="@color/sf_muted_2" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Aksi bawah -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_actionbar"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="11dp">
+
+        <TextView
+            style="@style/SF.Btn.Ghost"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Batal" />
+
+        <TextView
+            style="@style/SF.Btn.Primary"
+            android:layout_width="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic12_save"
+            android:text="Simpan pengaturan" />
+    </LinearLayout>
+</LinearLayout>

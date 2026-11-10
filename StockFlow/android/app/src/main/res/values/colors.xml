@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Palet edisi database — diambil dari token db-src/style-base.css (:root)
+  Sumber tampilan: draft.html (StockFlow — Edisi Database, dari stockflow_database.sql)
+-->
+<resources>
+
+    <!-- Brand emerald -->
+    <color name="sf_brand">#0B6B4F</color>
+    <color name="sf_brand_2">#12875D</color>
+    <color name="sf_brand_deep">#053B2A</color>
+    <color name="sf_brand_ink">#06261B</color>
+    <color name="sf_on_brand">#FFFFFF</color>
+
+    <!-- Permukaan -->
+    <color name="sf_bg">#F4F7F3</color>
+    <color name="sf_bg_2">#E8EFE9</color>
+    <color name="sf_card">#FFFFFF</color>
+    <color name="sf_mint">#DFF2E7</color>
+    <color name="sf_mint_2">#EEF8F1</color>
+
+    <!-- Teks -->
+    <color name="sf_ink">#0C2018</color>
+    <color name="sf_text">#2C4037</color>
+    <color name="sf_muted">#74867D</color>
+    <color name="sf_muted_2">#94A49C</color>
+    <color name="sf_on_card_muted">#9AA8A0</color>
+
+    <!-- Garis -->
+    <color name="sf_line">#E4EBE5</color>
+    <color name="sf_line_strong">#D5E0D8</color>
+
+    <!-- Status -->
+    <color name="sf_safe">#167552</color>
+    <color name="sf_safe_bg">#E9F6EF</color>
+    <color name="sf_safe_line">#CFEADC</color>
+    <color name="sf_warn">#98610F</color>
+    <color name="sf_warn_bg">#FCF3E3</color>
+    <color name="sf_warn_line">#F0DFBE</color>
+    <color name="sf_danger">#B4473F</color>
+    <color name="sf_danger_bg">#FCECEB</color>
+    <color name="sf_danger_line">#F3D3D0</color>
+    <color name="sf_info">#2C6389</color>
+    <color name="sf_info_bg">#EBF4FA</color>
+    <color name="sf_info_line">#D4E6F1</color>
+    <color name="sf_violet">#6B5A9E</color>
+    <color name="sf_violet_bg">#F0EDF8</color>
+
+    <!-- Tambahan komponen -->
+    <color name="sf_ghost_text">#345247</color>
+    <color name="sf_brand_dark">#084B36</color>
+    <color name="sf_icon_gray">#526A5E</color>
+    <color name="sf_tab_off">#93A29A</color>
+    <color name="sf_chip_text">#647A6F</color>
+    <color name="sf_track">#EDF2EE</color>
+    <color name="sf_input_bg">#FCFDFC</color>
+    <color name="sf_seg_bg">#E9EFE9</color>
+    <color name="sf_chev">#A4B2AA</color>
+    <color name="sf_label">#334F43</color>
+    <color name="sf_danger_ink">#8C332D</color>
+    <color name="sf_warn_ink">#7D5210</color>
+    <color name="sf_info_ink">#2B5F80</color>
+    <color name="sf_muted_bg">#F0F3F1</color>
+    <color name="sf_hero_label">#B8DDCB</color>
+    <color name="sf_hero_eyebrow">#9FE3C2</color>
+
+    <!-- Login (gelap) -->
+    <color name="sf_auth_top">#073F2C</color>
+    <color name="sf_auth_mid">#052B1E</color>
+    <color name="sf_auth_bottom">#031B13</color>
+    <color name="sf_auth_text">#F5FFFA</color>
+    <color name="sf_auth_label">#C2E3D2</color>
+    <color name="sf_auth_lede">#A8CCBB</color>
+    <color name="sf_auth_hint">#7EA793</color>
+    <color name="sf_auth_eyebrow">#77C8A4</color>
+    <color name="sf_auth_icon">#8DB8A5</color>
+    <color name="sf_auth_foot">#7FA890</color>
+    <color name="sf_auth_foot_strong">#9BC4B0</color>
+    <color name="sf_auth_mark">#BDF4D8</color>
+    <color name="sf_auth_input_stroke">#33BEECD5</color>
+    <color name="sf_auth_input">#14FFFFFF</color>
+
+</resources>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tab bar staff, tab aktif: barang (draft.html .tabbar) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="68dp"
+    android:background="@drawable/bg_tabbar"
+    android:orientation="horizontal"
+    android:paddingHorizontal="12dp"
+    android:paddingTop="6dp"
+    android:paddingBottom="8dp"
+    tools:ignore="HardcodedText,ContentDescription">
+
+    <LinearLayout
+        android:id="@+id/tab_beranda"
+        style="@style/SF.Tab">
+
+        <FrameLayout
+            android:layout_width="36dp"
+            android:layout_height="27dp">
+
+            <ImageView
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_home"
+                app:tint="@color/sf_tab_off" />
+        </FrameLayout>
+
+        <TextView
+            style="@style/SF.Tab.Label"
+            android:text="Beranda" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tab_barang"
+        style="@style/SF.Tab">
+
+        <FrameLayout
+            android:layout_width="36dp"
+            android:layout_height="27dp"
+            android:background="@drawable/bg_tab_active">
+
+            <ImageView
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_box"
+                app:tint="@color/sf_brand" />
+        </FrameLayout>
+
+        <TextView
+            style="@style/SF.Tab.Label.Active"
+            android:text="Barang" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tab_riwayat"
+        style="@style/SF.Tab">
+
+        <FrameLayout
+            android:layout_width="36dp"
+            android:layout_height="27dp">
+
+            <ImageView
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_history"
+                app:tint="@color/sf_tab_off" />
+        </FrameLayout>
+
+        <TextView
+            style="@style/SF.Tab.Label"
+            android:text="Riwayat" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tab_profil"
+        style="@style/SF.Tab">
+
+        <FrameLayout
+            android:layout_width="36dp"
+            android:layout_height="27dp">
+
+            <ImageView
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_user"
+                app:tint="@color/sf_tab_off" />
+        </FrameLayout>
+
+        <TextView
+            style="@style/SF.Tab.Label"
+            android:text="Profil" />
+    </LinearLayout>
+</LinearLayout>

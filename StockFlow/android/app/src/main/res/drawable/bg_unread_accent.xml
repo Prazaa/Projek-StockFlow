@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Aksen vertikal kartu notifikasi yang belum dibaca (draft.html .notif-card.is-unread::before). -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/sf_brand_2" />
+    <corners
+        android:topRightRadius="4dp"
+        android:bottomRightRadius="4dp" />
+</shape>

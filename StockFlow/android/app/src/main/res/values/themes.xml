@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Tema edisi database. Kern tampilan memakai Material 3:
+  MaterialCardView, MaterialButton, Chip, TextInputLayout, BottomNavigationView.
+-->
+<resources xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <style name="Theme.StockFlow" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/sf_brand</item>
+        <item name="colorOnPrimary">@color/sf_on_brand</item>
+        <item name="colorPrimaryContainer">@color/sf_mint</item>
+        <item name="colorOnPrimaryContainer">@color/sf_brand_ink</item>
+        <item name="colorSecondary">@color/sf_brand_2</item>
+        <item name="colorError">@color/sf_danger</item>
+        <item name="android:colorBackground">@color/sf_bg</item>
+        <item name="android:statusBarColor">@color/sf_brand_deep</item>
+        <item name="android:navigationBarColor">@color/sf_card</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:fontFamily">@font/plus_jakarta_sans</item>
+        <item name="fontFamily">@font/plus_jakarta_sans</item>
+    </style>
+
+    <!-- Kartu dasar -->
+    <style name="StockFlow.Card" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="app:cardCornerRadius">@dimen/sf_radius_card</item>
+        <item name="app:cardBackgroundColor">@color/sf_card</item>
+        <item name="app:strokeWidth">1dp</item>
+        <item name="app:strokeColor">@color/sf_line</item>
+        <item name="app:cardElevation">0dp</item>
+        <item name="android:layout_marginBottom">@dimen/sf_space_md</item>
+    </style>
+
+    <!-- Tombol pill -->
+    <style name="StockFlow.Pill" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="app:cardCornerRadius">@dimen/sf_radius_pill</item>
+        <item name="app:cardElevation">0dp</item>
+        <item name="app:strokeWidth">0dp</item>
+    </style>
+
+</resources>

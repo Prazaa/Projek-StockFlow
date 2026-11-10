@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Akun pengguna (pemilik) — draft.html usersPage(). Sub-halaman tanpa tabbar.
+  Data = seed users: Budi Santoso @pemilik (Anda) dan Rina Wulandari @staf, dibuat 30 Okt 2026.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sf_bg"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText,ContentDescription,UseCompatTextViewDrawableXml">
+
+    <!-- Topbar sub-halaman -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_topbar_sub"
+        android:gravity="center_vertical"
+        android:minHeight="62dp"
+        android:orientation="horizontal"
+        android:paddingStart="18dp"
+        android:paddingTop="17dp"
+        android:paddingEnd="18dp"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            style="@style/SF.IconBtn.Boxed"
+            android:src="@drawable/ic_arrow_left" />
+
+        <TextView
+            style="@style/SF.Text.Title"
+            android:layout_width="0dp"
+            android:layout_marginStart="11dp"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="Akun pengguna"
+            android:textSize="18sp" />
+
+        <ImageView
+            style="@style/SF.IconBtn.Boxed"
+            android:layout_marginStart="11dp"
+            android:src="@drawable/ic_plus" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="18dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="18dp"
+            android:paddingBottom="26dp">
+
+            <!-- Metrik -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_card_12"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        style="@style/SF.Text.Title"
+                        android:letterSpacing="-0.04"
+                        android:text="2" />
+
+                    <TextView
+                        style="@style/SF.Text.Caption"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/plus_jakarta_sans_bold"
+                        android:text="total akun" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_card_12"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        style="@style/SF.Text.Title"
+                        android:letterSpacing="-0.04"
+                        android:text="2"
+                        android:textColor="@color/sf_safe" />
+
+                    <TextView
+                        style="@style/SF.Text.Caption"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/plus_jakarta_sans_bold"
+                        android:text="aktif" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_card_12"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        style="@style/SF.Text.Title"
+                        android:letterSpacing="-0.04"
+                        android:text="1" />
+
+                    <TextView
+                        style="@style/SF.Text.Caption"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/plus_jakarta_sans_bold"
+                        android:text="staf" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Alert strip info -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_alert_info"
+                android:orientation="horizontal"
+                android:paddingHorizontal="11dp"
+                android:paddingVertical="10dp">
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_marginTop="1dp"
+                    android:src="@drawable/ic_shield_check"
+                    app:tint="@color/sf_info_ink" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/SF.Text"
+                        android:fontFamily="@font/plus_jakarta_sans_extrabold"
+                        android:text="Akun staf dibuat pemilik."
+                        android:textColor="@color/sf_info_ink"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        style="@style/SF.Text"
+                        android:layout_marginTop="1dp"
+                        android:lineSpacingMultiplier="1.25"
+                        android:text="Tidak ada registrasi mandiri. Menonaktifkan akun mencabut seluruh token Sanctum miliknya."
+                        android:textColor="@color/sf_info_ink"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- User card: Budi Santoso (Anda) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_card_14"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="11dp">
+
+                <TextView
+                    style="@style/SF.Text"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_avatar"
+                    android:fontFamily="@font/plus_jakarta_sans_extrabold"
+                    android:gravity="center"
+                    android:text="BS"
+                    android:textColor="#17523A"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/SF.Text.Strong"
+                            android:fontFamily="@font/plus_jakarta_sans_extrabold"
+                            android:text="Budi Santoso" />
+
+                        <TextView
+                            style="@style/SF.Text"
+                            android:layout_marginStart="5dp"
+                            android:background="@drawable/bg_pill_brand"
+                            android:fontFamily="@font/plus_jakarta_sans_extrabold"
+                            android:paddingHorizontal="6dp"
+                            android:paddingVertical="2dp"
+                            android:text="Anda"
+                            android:textColor="@color/sf_brand"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/SF.Text.Caption"
+                        android:layout_marginTop="2dp"
+                        android:text="\@pemilik · dibuat 30 Okt 2026" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/SF.Pill.Brand"
+                            android:text="Pemilik" />
+
+                        <TextView
+                            style="@style/SF.Pill.Safe"
+                            android:layout_marginStart="4dp"
+                            android:text="Aktif" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        style="@style/SF.IconBtn.Boxed"
+                        android:src="@drawable/ic_edit" />
+
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:checked="true"
+                        android:enabled="false" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- User card: Rina Wulandari (staf) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_card_14"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="11dp">
+
+                <TextView
+                    style="@style/SF.Text"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_avatar_staff"
+                    android:fontFamily="@font/plus_jakarta_sans_extrabold"
+                    android:gravity="center"
+                    android:text="RW"
+                    android:textColor="#294669"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/SF.Text.Strong"
+                        android:fontFamily="@font/plus_jakarta_sans_extrabold"
+                        android:text="Rina Wulandari" />
+
+                    <TextView
+                        style="@style/SF.Text.Caption"
+                        android:layout_marginTop="2dp"
+                        android:text="\@staf · dibuat 30 Okt 2026" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/SF.Pill.Info"
+                            android:text="Staf" />
+
+                        <TextView
+                            style="@style/SF.Pill.Safe"
+                            android:layout_marginStart="4dp"
+                            android:text="Aktif" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        style="@style/SF.IconBtn.Boxed"
+                        android:src="@drawable/ic_edit" />
+
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:checked="true" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Sumber -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <ImageView
+                    android:layout_width="11dp"
+                    android:layout_height="11dp"
+                    android:layout_marginTop="1dp"
+                    android:src="@drawable/ic_database"
+                    app:tint="@color/sf_muted_2" />
+
+                <TextView
+                    style="@style/SF.Text.Caption"
+                    android:layout_marginStart="4dp"
+                    android:text="Sumber: users · peran pemilik/staf · aktif 0/1 · unique username"
+                    android:textColor="@color/sf_muted_2" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

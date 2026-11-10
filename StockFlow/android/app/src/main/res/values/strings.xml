@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">StockFlow</string>
+    <string name="sf_batch_fefo_info">Urutan <b>FEFO.</b> Batch dengan tanggal kedaluwarsa terdekat ditampilkan lebih dulu, kecuali batch yang sudah ditangani.</string>
+</resources>

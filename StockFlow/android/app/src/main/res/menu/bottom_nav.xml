@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Bottom nav 4 tab (id peran berbeda: staf memakai item riwayat,
+  pemilik memakai item laporan — lihat view_bottom_nav.xml).
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_beranda"
+        android:title="Beranda" />
+
+    <item
+        android:id="@+id/nav_barang"
+        android:title="Barang" />
+
+    <item
+        android:id="@+id/nav_transaksi"
+        android:title="Laporan" />
+
+    <item
+        android:id="@+id/nav_profil"
+        android:title="Profil" />
+
+</menu>
